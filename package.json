@@ -56,7 +56,9 @@
     "build": "grunt build",
     "install-build": "npm install && grunt build",
     "preversion": "npm run clean && npm run build && npm run test:version",
-    "postversion": "git push --no-verify && git push --tags --no-verify"
+    "postversion": "git push --no-verify && git push --tags --no-verify",
+
+    "test:mine": "mocha --require spec/config/setup spec/integration/pr/test-pr-9999.spec.js"
   },
   "husky": {
     "hooks": {
