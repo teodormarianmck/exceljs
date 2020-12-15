@@ -4,7 +4,7 @@
  * or https://github.com/exceljs/exceljs/blob/master/LICENSE
  */
 
-if (parseInt(process.versions.node.split('.')[0], 10) < 10) {
+if (process.versions && parseInt(process.versions.node.split('.')[0], 10) < 10) {
   throw new Error(
     'For node versions older than 10, please use the ES5 Import: https://github.com/exceljs/exceljs#es5-imports'
   );
